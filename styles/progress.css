@@ -1,0 +1,25 @@
+.progress {
+    --height: min(10vh, 30px);
+    --percentage: 100%;
+    --color: var(--main-color);
+
+    width: 100%;
+    height: var(--height);
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--main-transparent-color);
+    cursor: pointer;
+}
+
+.progress::before{
+    --anim-time: .4s;
+
+    width: var(--percentage);
+    transition: width var(--anim-time), color var(--anim-time);
+    content: "";
+    display: block;
+    background-color: var(--color);
+    height: inherit;
+}

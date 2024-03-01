@@ -1,0 +1,19 @@
+button {
+    border-radius: 10%;
+    height: min(50vh, 5rem);
+    cursor: pointer;
+    background-color: hsl(0, 0%, 88%);
+    transition: background-color .2s;
+    padding: 0px .3rem;
+
+    box-shadow: 2px 2px 5px var(--main-transparent-color);
+}
+
+button:hover{
+    background-color: hsl(0, 0%, 95%);
+}
+
+button img{
+    height: 100%;
+    object-fit: contain;
+}

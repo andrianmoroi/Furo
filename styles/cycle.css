@@ -1,0 +1,31 @@
+.cycle {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr auto;
+    gap: 10px;
+
+    align-items: center;
+}
+
+.cycle-range {
+    width: inherit;
+    opacity: 0.3;
+    background: var(--main-color);
+    transition: opacity .2s;
+    appearance: none;
+    outline: none;
+    height: 5px;
+}
+
+.cycle-range::-webkit-slider-thumb {
+    background: var(--main-color);
+    appearance: none;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cycle-range:hover{
+    opacity: 1.0;
+}

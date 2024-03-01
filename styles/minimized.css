@@ -1,0 +1,20 @@
+@media (max-height: 220px) {
+    .container {
+        grid-template-areas: "progress buttons";
+        grid-template-columns: 5fr auto auto;
+        align-items: center;
+        grid-auto-rows: auto;
+    }
+
+    .progress {
+        --height: 50vh;
+    }
+
+    .timer {
+        display: none;
+    }
+
+    .cycle {
+        display: none;
+    }
+}

@@ -1,0 +1,54 @@
+{
+	"name": "furo",
+	"productName": "Furo",
+	"version": "1.0.4",
+	"description": "Pomodoro application.",
+	"main": "./build/application/main.js",
+	"scripts": {
+		"build:main": "tsc -p .\\source\\application\\tsconfig.main.json",
+		"build:render": "tsc -p .\\source\\renderer\\tsconfig.renderer.json",
+		"fix_extension": "powershell.exe -File .\\scripts\\fix-extension.ps1",
+		"watch:main": "tsc -w -p .\\source\\application\\tsconfig.main.json",
+		"watch:render": "tsc -w -p .\\source\\renderer\\tsconfig.renderer.json",
+		"watch:fix": "powershell.exe -File .\\scripts\\watch-files.ps1",
+		"build": "npm run build:main && npm run build:render && npm run fix_extension",
+		"start": "npm run build && electron .",
+		"dev": "cross-env DEVELOPMENT=1 concurrently \"npm run watch:main\" \"npm run watch:render\" \"npm run watch:fix\" \"electron .\"",
+		"package": "npm run build && electron-builder"
+	},
+	"build": {
+		"appId": "Furo",
+		"win": {
+			"target": [
+				"nsis"
+			],
+			"icon": "ico\\android-chrome-512x512.png"
+		},
+		"files": [
+			".\\build\\**\\*",
+			".\\index.html",
+			".\\styles\\**\\*",
+			".\\icons\\**\\*",
+			".\\sounds\\**\\*"
+		],
+		"nsis": {
+			"oneClick": false,
+			"uninstallDisplayName": "Furo",
+			"license": "LICENSE",
+			"allowToChangeInstallationDirectory": true
+		}
+	},
+	"keywords": [],
+	"author": "Andrian Moroi",
+	"license": "MIT",
+	"devDependencies": {
+		"concurrently": "^8.2.2",
+		"cross-env": "^7.0.3",
+		"electron": "28.2.3",
+		"electron-builder": "^24.12.0",
+		"typescript": "^5.3.3"
+	},
+	"dependencies": {
+		"electron-reload": "^2.0.0-alpha.1"
+	}
+}

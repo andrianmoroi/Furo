@@ -1,0 +1,48 @@
+.container {
+    -webkit-app-region: drag;
+    display: grid;
+    grid-template-areas:
+        "timer"
+        "progress"
+        "buttons"
+        "cycle";
+    justify-items: center;
+    align-items: top;
+    grid-auto-rows: min-content;
+    gap: 10px;
+    height: 100vh;
+    padding: 5vh 2vw;
+}
+
+.container>* {
+    -webkit-app-region: none;
+    user-select: none;
+}
+
+.timer {
+    grid-area: timer;
+    -webkit-app-region: drag;
+}
+
+.progress {
+    grid-area: progress;
+}
+
+.buttons {
+    -webkit-app-region: drag;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    grid-area: buttons;
+    width: 100%;
+    gap: 10px;
+}
+
+.buttons > * {
+    -webkit-app-region: none;
+}
+
+.cycle {
+    grid-area: cycle;
+}

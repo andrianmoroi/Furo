@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "target": "ESNext", // Adjust based on your frontend needs
+      "module": "ESNext", // Use ES modules for modern browsers
+      "lib": ["dom", "dom.iterable", "es2015"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "noImplicitAny": true,
+      "sourceMap": false,
+      "outDir": "../../build/renderer",
+      "baseUrl": ".",
+      "paths": {
+        "electron": ["."] // Map electron to the main process code
+      }
+    },
+    "include": ["."]
+  }
+  

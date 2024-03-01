@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --focus-color: red;
+    --relax-color: blue;
+    --over-color: green;
+
+    --focus-transparent-color: rgba(255, 0, 0, 0.3);
+    --relax-transparent-color: rgba(0, 0, 255, 0.3);
+
+    --main-color: var(--focus-color);
+    --main-transparent-color: var(--focus-transparent-color);
+}

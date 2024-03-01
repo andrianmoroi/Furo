@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/buttons.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/container.css">
+    <link rel="stylesheet" href="styles/cycle.css">
+    <link rel="stylesheet" href="styles/progress.css">
+    <link rel="stylesheet" href="styles/timer.css">
+
+    <link rel="stylesheet" href="styles/minimized.css">
+</head>
+
+<body>
+
+    <div id="container" class="container">
+        <div id="timer" class="timer"></div>
+
+        <div id="progress" class="progress"></div>
+
+        <div id="buttons" class="buttons">
+            <button id="change-state" class="change-state">
+                <img src="icons/coffe.svg" alt="" srcset="">
+            </button>
+
+            <button id="mute" class="mute">
+                <img src="icons/volume.svg" alt="" srcset="">
+            </button>
+
+            <button id="next" class="next">
+                <img src="icons/next.svg" alt="" srcset="">
+            </button>
+        </div>
+
+        <div id="cycle" class="cycle">
+            <input type="range" min="6" max="120" value="60" step="6" class="cycle-range" id="cycle-range" />
+
+            <div id="cycle-message" class="cycle-message"></div>
+        </div>
+    </div>
+
+    <audio src="sounds/music/Kids Playing.mp3" id="player"></audio>
+    <audio src="sounds/notifications/beep-strong.mp3" id="notification" loop="false"></audio>
+
+    <script src="build/renderer/renderer.js" type="module"></script>
+
+</body>
+
+</html>

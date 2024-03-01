@@ -1,0 +1,10 @@
+{
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.gitignore": true,
+        "**/node_modules": true,
+        "**/dist": true, 
+        "**/build": true, 
+    }
+}
